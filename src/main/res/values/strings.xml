@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AndroidPract18</string>
+    <string name="dogsWebsite">https://doge.ru/poroda/koton-de-tulear</string>
+    <string name="doberman">Доберман</string>
+    <string name="kotonDeTulear">Котон-Де-Тулеар</string>
+    <string name="bladhaund">Бладхаунд</string>
+    <string-array name="catNames">
+        <item>Барсик</item>
+        <item>Мурзик</item>
+        <item>Васька</item>
+        <item>Рыжик</item>
+    </string-array>
+</resources>
