@@ -5,11 +5,86 @@
     android:layout_height="match_parent"
     tools:context=".SpeciesInfoFragment">
 
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="left"
-        android:text="fhfhfghfgh"
-        android:id="@+id/speciesName"/>
+        android:orientation="vertical"
+        android:id="@+id/linearLayout1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="fhfhfghfgh"
+            android:textIsSelectable="true"
+            android:textSize="30dp"
+            android:id="@+id/speciesName"/>
+
+
+
+        <TextView
+            android:id="@+id/SpeciesInfo1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textIsSelectable="true"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/SpeciesInfo2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textIsSelectable="true"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/SpeciesInfo3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textIsSelectable="true"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/SpeciesInfo4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textIsSelectable="true"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/SpeciesInfo5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textIsSelectable="true"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/SpeciesInfo6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textIsSelectable="true"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/SpeciesInfo7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textIsSelectable="true"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/SpeciesInfo8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textIsSelectable="true"
+            android:text="" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/speciesImage"
+            />
+    </LinearLayout>
+
+
 
 </FrameLayout>

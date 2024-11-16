@@ -2,9 +2,48 @@
     <string name="app_name">AndroidPract18</string>
     <string name="dogsWebsite">https://doge.ru/poroda/koton-de-tulear</string>
 
-    <string-array name="Species">
+    <string-array name="SpeciesLocaled">
         <item>Доберман</item>
         <item>Котон-Де-Тулеар</item>
         <item>Бладхаунд</item>
+    </string-array>
+    <string-array name="Species">
+        <item>Doberman</item>
+        <item>KotonDeTulear</item>
+        <item>Bladhaund</item>
+    </string-array>
+
+
+    <string-array name="Doberman">
+        <item>Стоимость: От 70 до 80 тыс. руб.</item>
+        <item>Длительность жизни: От 10 до 14 лет</item>
+        <item>Шерсть: Линяет</item>
+        <item>Рождаемость: От 2 до 9 щенков</item>
+        <item>Рост в холке, см: От 61 до 72 см</item>
+        <item>Вес, кг: От 30 до 45 кг</item>
+        <item>Содержание: Опыт требуется</item>
+        <item>Назначение: Служебные</item>
+    </string-array>
+
+    <string-array name="KotonDeTulear">
+        <item>Стоимость: От 30 до 50 тыс. руб.</item>
+        <item>Длительность жизни: От 14 д 19 лет</item>
+        <item>Шерсть: Мало линяет</item>
+        <item>Рождаемость: От 2 до 5 щенков</item>
+        <item>Рост в холке, см: Девочка от 23 до 25 см, мальчик от 26 до 28 см.</item>
+        <item>Вес, кг: Мальчик от 4 до 6 кг, девочка от 3.5 до 5 кг.</item>
+        <item>Содержание: Не требуется</item>
+        <item>Назначение: Декоративные, Компаньоны</item>
+    </string-array>
+
+    <string-array name="Bladhaund">
+        <item>Стоимость: От 30 до 50 тыс. руб.</item>
+        <item>Длительность жизни: От 7 до 10 лет</item>
+        <item>Шерсть: Линяет</item>
+        <item>Рождаемость: От 5 до 8 щенков</item>
+        <item>Рост в холке, см: От 62 до 68 см</item>
+        <item>Вес, кг: От 45 до 50 кг</item>
+        <item>Содержание: Опыт требуется</item>
+        <item>Назначение: Охотничьи, Служебные, Компаньоны</item>
     </string-array>
 </resources>

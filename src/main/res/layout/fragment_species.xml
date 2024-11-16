@@ -8,8 +8,8 @@
 
     <Spinner
         android:id="@+id/speciesSpinner"
-        android:entries="@array/Species"
+        android:entries="@array/SpeciesLocaled"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:spinnerMode="dropdown" />
+        android:spinnerMode="dropdown"/>
 </FrameLayout>

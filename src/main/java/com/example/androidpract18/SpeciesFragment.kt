@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Spinner
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -37,7 +38,11 @@ class SpeciesFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_species, container, false)
     }
 
-    companion object {
+
+
+
+
+companion object {
         /**
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.
@@ -55,5 +60,11 @@ class SpeciesFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+
+
+    fun objectSelected(view: View){
+
     }
 }
