@@ -41,7 +41,6 @@ class SpeciesFragment : Fragment() {
 
 
 
-
 companion object {
         /**
          * Use this factory method to create a new instance of
@@ -60,11 +59,5 @@ companion object {
                     putString(ARG_PARAM2, param2)
                 }
             }
-    }
-
-
-
-    fun objectSelected(view: View){
-
     }
 }
