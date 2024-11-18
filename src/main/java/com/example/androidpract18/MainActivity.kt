@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 spinner.onItemSelectedListener=newAdapter
 
-                var chosesList=mutableListOf("Выберете породу")
+                val chosesList=mutableListOf("Выберете породу")
                 chosesList.addAll(resources.getStringArray(R.array.SpeciesLocaled))
                 val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, chosesList)
                 spinner.adapter=adapter

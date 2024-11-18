@@ -1,6 +1,10 @@
 package com.example.androidpract18
 
 import android.os.Bundle
+import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Spinner
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -15,6 +19,30 @@ class MainPortraitActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        val spinner: Spinner?=
+            findViewById<Spinner>(R.id.speciesSpinner)
+        if (spinner!=null){
+            val newAdapter=
+                object : AdapterView.OnItemSelectedListener {
+                    override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                        val selectedItem = parent?.getItemAtPosition(position).toString()
+                        if (position==0)
+                            return
+                        //setTextForSpecies(position-1)
+                        //setSpeciesImage(position-1)
+                    }
+
+                    override fun onNothingSelected(parent: AdapterView<*>?) {
+                    }
+                }
+            spinner.onItemSelectedListener=newAdapter
+
+            val chosesList=mutableListOf("Выберете породу")
+            chosesList.addAll(resources.getStringArray(R.array.SpeciesLocaled))
+            val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, chosesList)
+            spinner.adapter=adapter
         }
     }
 }
