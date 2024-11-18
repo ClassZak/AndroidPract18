@@ -52,8 +52,7 @@ class MainActivity : AppCompatActivity() {
 
                 var chosesList=mutableListOf("Выберете породу")
                 chosesList.addAll(resources.getStringArray(R.array.SpeciesLocaled))
-                val adapter = ArrayAdapter(this,
-                    android.R.layout.simple_spinner_item, chosesList)
+                val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, chosesList)
                 spinner.adapter=adapter
             }
         }
