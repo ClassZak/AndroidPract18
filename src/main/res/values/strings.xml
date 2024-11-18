@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">AndroidPract18</string>
     <string name="dogsWebsite">https://doge.ru/poroda/koton-de-tulear</string>
+    <string name="back">Назад</string>
 
     <string-array name="SpeciesLocaled">
         <item>Доберман</item>

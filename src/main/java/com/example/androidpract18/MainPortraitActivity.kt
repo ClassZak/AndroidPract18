@@ -1,5 +1,7 @@
 package com.example.androidpract18
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
@@ -11,6 +13,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainPortraitActivity : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -21,8 +24,7 @@ class MainPortraitActivity : AppCompatActivity() {
             insets
         }
 
-        val spinner: Spinner?=
-            findViewById<Spinner>(R.id.speciesSpinner)
+        val spinner: Spinner?= findViewById<Spinner>(R.id.speciesSpinner)
         if (spinner!=null){
             val newAdapter=
                 object : AdapterView.OnItemSelectedListener {
@@ -30,8 +32,7 @@ class MainPortraitActivity : AppCompatActivity() {
                         val selectedItem = parent?.getItemAtPosition(position).toString()
                         if (position==0)
                             return
-                        //setTextForSpecies(position-1)
-                        //setSpeciesImage(position-1)
+                        startDetailActivity(position-1)
                     }
 
                     override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -44,5 +45,9 @@ class MainPortraitActivity : AppCompatActivity() {
             val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, chosesList)
             spinner.adapter=adapter
         }
+    }
+
+    fun startDetailActivity(number:Int){
+        startActivity(Intent(this,DetailPortraitActivity::class.java).setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY).putExtra("selectedNumber",number))
     }
 }
