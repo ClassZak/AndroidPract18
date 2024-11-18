@@ -2,10 +2,10 @@ package com.example.androidpract18
 
 import android.annotation.SuppressLint
 import android.content.res.Configuration
-import android.graphics.Point
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.Spinner
@@ -39,14 +39,22 @@ class MainActivity : AppCompatActivity() {
                 object : AdapterView.OnItemSelectedListener {
                     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                         val selectedItem = parent?.getItemAtPosition(position).toString()
-                        setTextForSpecies(position)
-                        setSpeciesImage(position)
+                        if (position==0)
+                            return
+                        setTextForSpecies(position-1)
+                        setSpeciesImage(position-1)
                     }
 
                     override fun onNothingSelected(parent: AdapterView<*>?) {
                     }
                 }
                 spinner.onItemSelectedListener=newAdapter
+
+                var chosesList=mutableListOf("Выберете породу")
+                chosesList.addAll(resources.getStringArray(R.array.SpeciesLocaled))
+                val adapter = ArrayAdapter(this,
+                    android.R.layout.simple_spinner_item, chosesList)
+                spinner.adapter=adapter
             }
         }
         catch (e:Throwable){
@@ -76,6 +84,7 @@ class MainActivity : AppCompatActivity() {
             fragment2Ref.layoutParams.width=LayoutParams.MATCH_PARENT
         }
         else{
+            layoutRef.layoutParams.width=resources.displayMetrics.widthPixels
             layoutRef.orientation=LinearLayout.HORIZONTAL
 
             fragment1Ref.layoutParams.height=LayoutParams.MATCH_PARENT
