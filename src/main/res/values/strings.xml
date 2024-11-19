@@ -5,13 +5,13 @@
 
     <string-array name="SpeciesLocaled">
         <item>Доберман</item>
-        <item>Котон-Де-Тулеар</item>
         <item>Бладхаунд</item>
+        <item>Котон-Де-Тулеар</item>
     </string-array>
     <string-array name="Species">
         <item>Doberman</item>
-        <item>KotonDeTulear</item>
         <item>Bladhaund</item>
+        <item>KotonDeTulear</item>
     </string-array>
 
 

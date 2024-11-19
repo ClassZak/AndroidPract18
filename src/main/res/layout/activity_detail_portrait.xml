@@ -7,23 +7,29 @@
     android:layout_height="match_parent"
     tools:context=".DetailPortraitActivity">
 
-    <fragment
-        android:id="@+id/fragment2"
-        android:name="com.example.androidpract18.SpeciesInfoFragment"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginTop="64dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/fragment2"
-        android:id="@+id/backButton"
-        android:text="@string/back"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/layoutDetail">
+        <fragment
+            android:id="@+id/fragment2"
+            android:name="com.example.androidpract18.SpeciesInfoFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/back"/>
+    </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

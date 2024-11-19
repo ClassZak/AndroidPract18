@@ -26,8 +26,8 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        if(resources.configuration.orientation== Configuration.ORIENTATION_LANDSCAPE)
-            startActivity(Intent(this,MainLandscapeActivity::class.java).setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY).putExtra("selectedNumber",selectedNumber))
+
+
 
         val spinner: Spinner?= findViewById<Spinner>(R.id.speciesSpinner)
         if (spinner!=null){
@@ -49,6 +49,17 @@ class MainActivity : AppCompatActivity() {
             chosesList.addAll(resources.getStringArray(R.array.SpeciesLocaled))
             val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, chosesList)
             spinner.adapter=adapter
+        }
+
+        if(resources.configuration.orientation== Configuration.ORIENTATION_LANDSCAPE) {
+            startActivity(Intent(this,MainLandscapeActivity::class.java).setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY).putExtra("selectedNumber",selectedNumber))
+        }
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        if(newConfig.orientation== Configuration.ORIENTATION_LANDSCAPE) {
+            startActivity(Intent(this,MainLandscapeActivity::class.java).setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY).putExtra("selectedNumber",selectedNumber))
         }
     }
 

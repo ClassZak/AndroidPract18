@@ -27,8 +27,7 @@ class MainLandscapeActivity : AppCompatActivity() {
             insets
         }
 
-        if(resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT)
-            startActivity(Intent(this,MainPortraitActivity::class.java).setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY))
+
 
         val spinner: Spinner?= findViewById<Spinner>(R.id.speciesSpinner)
         if (spinner!=null){
@@ -36,17 +35,10 @@ class MainLandscapeActivity : AppCompatActivity() {
                 object : AdapterView.OnItemSelectedListener {
                     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                         val selectedItem = parent?.getItemAtPosition(position).toString()
-                        val spinnerRef=(view as Spinner)
                         if (position==0)
                             return
-                        else{
-                            if(spinnerRef.adapter.count==4) {
-                                deleteFirstButton()
-                            }
-                        }
-                        val manyElemnts:Boolean=spinnerRef.adapter.count==4
-                        setTextForSpecies(position-if(manyElemnts) 1; else 0)
-                        setSpeciesImage(position-if(manyElemnts) 1; else 0)
+                        setTextForSpecies(position-1)
+                        setSpeciesImage(position-1)
                     }
 
                     override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -59,12 +51,15 @@ class MainLandscapeActivity : AppCompatActivity() {
             val adapter = android.widget.ArrayAdapter(this, android.R.layout.simple_spinner_item, choosesList)
             spinner.adapter=adapter
         }
+
+        if(resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT)
+            startActivity(Intent(this,MainActivity::class.java).setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY))
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
         if(newConfig.orientation==Configuration.ORIENTATION_PORTRAIT)
-            startActivity(Intent(this,MainPortraitActivity::class.java).setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY))
+            startActivity(Intent(this,MainActivity::class.java).setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY))
     }
     fun deleteFirstButton(){
         findViewById<Spinner>(R.id.speciesSpinner).adapter=android.widget.ArrayAdapter(this, android.R.layout.simple_spinner_item, resources.getStringArray(R.array.SpeciesLocaled))
